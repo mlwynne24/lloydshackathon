@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;1,100&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+
+    <link rel="stylesheet" href="public/css/hackerui1styles.css">
+
+
+
+  </head>
+
+  <body>
+
+    <div id="top-bar">
+
+      <div id="title-container">
+
+        <h1 id="hacker-name">Ghoul (6H0UL)</h1>
+      
+      </div>
+
+      
+
+      <img src="images/hacker-icon.png" id="hacker-icon">
+
+      <div class="clear-left"></div>
+
+      <div id="money-container">£<span id="current-budget">1000000</span></div>
+
+      <div id="points-div">
+
+        <div id="points-para-container">
+        <p id="points-para">Points: </p>
+
+      </div>
+
+        <div id="points-container"><span id="current-points">0</span></div>
+
+      </div>
+
+      <div id="round-div">
+
+        <div id="round-para-container">
+        <p id="round-para">Round: </p>
+
+      </div>
+
+        <div id="round-container"><span id="current-round">1</span></div>
+
+      </div>
+
+    </div>
+
+    <div id="main-area">
+
+      <div id="left-area">
+
+        
+        <div id="row1">
+
+          <div class="option-tile row1class" id="window1">
+
+            <img src="images/hacker-tile.png" class="hacker-tile-image">
+
+            <div class="hover-div hidden">Phishing</div> 
+
+          </div>
+
+          <div class="option-tile row1class" id="window2">
+
+            <img src="images/hacker-tile.png" class="hacker-tile-image">
+
+            <div class="hover-div hidden">Malicious Websites</div> 
+
+          </div>
+
+          <div class="option-tile row1class" id="window3">
+
+            <img src="images/hacker-tile.png" class="hacker-tile-image">
+
+            <div class="hover-div hidden">Password Hacking</div> 
+
+          </div>
+
+        </div>
+
+        <div id="row2">
+
+          <div class="option-tile row2class" id="window4">
+
+            <img src="images/hacker-tile.png" class="hacker-tile-image">
+
+            <div class="hover-div hidden">Piggybacking</div> 
+
+          </div>
+
+          <div class="option-tile row2class" id="window5">
+
+            <img src="images/hacker-tile.png" class="hacker-tile-image">
+
+            <div class="hover-div hidden">Physical Social Engineering</div> 
+
+          </div>
+
+          <div class="option-tile row2class" id="window6">
+
+            <img src="images/hacker-tile.png" class="hacker-tile-image">
+
+            <div class="hover-div hidden">Physical System Hacking</div> 
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="right-area">
+
+        <div id="top-right-section">
+
+          <h3 id="investments">Investments</h3>
+          
+          <p class="hidden" id="tile1QuantityList">Phishing Price paid: <span id="tile1Quantity"></span></p>
+
+          <p class="hidden" id="tile3QuantityList">Password Hacking Price paid: <span id="tile3Quantity"></span></p>
+
+          <p class="hidden" id="tile5QuantityList">Physical Social Engineering Price paid: <span id="tile5Quantity"></span></p>
+
+        </div>
+
+        <div id="button-container">
+
+          <p id="waiting-p" class="hidden">Waiting for the other player</p>
+
+          <button id="submit-button">
+
+            SUBMIT
+
+          </button>
+
+          <button id="to-lloyds">
+
+            <a href="lloydsui1.html">OTHER TEAM</a>
+
+          </button>
+
+        </div>
+
+
+      </div>
+
+      <div class="popUpWindow hidden" id="window1Popup">
+
+        <div class="popUpWindowTitleContainer">
+          
+          <h2 class="popUpWindowTitle">Phishing</h2>
+
+        </div>
+
+        <button class="close-button" id="closeButton1">X</button>
+
+
+
+        <p class="popUpWindowText clear">The process of phishing imitates legitimate companies employees might interact with, like the enterprise software vendors or email provider, and simply ask for the data via phone or email. You can also send malicious links of files though emails or text messages which when clicked may download malware onto the system.</p>
+
+        <p class="popUpWindowText">Selecting this option will cause a Phishing email to be sent to a Lloyds employee containing some malware. (The effects of this method may be reduced if your opponent chooses to invest in internet safety training for staff). You can choose from the following Malware:</p>
+          
+        <ul>
+
+          <li class="popUpWindowText">Ransomware -  a type of malicious software designed to block access to a computer system until a sum of money is paid. 
+            <span class="green-writing">(If this is successful you will gain a ransom payment, the more you spend the higher the ransom will be and the higher your chances of success.)</span>
+          </li>
+
+          <li class="popUpWindowText">Trojans - Trojan is a type of malware that is often disguised as legitimate software. <span class="green-writing">(If this is successful then you may gain some valuable information that can be sold on the black market for more cash, it may also damage the reputation of Lloyds.)</span></li>
+
+          <li class="popUpWindowText">Spyware - Malicious software designed to enter your computer device, gather data about you, and forward it to a third-party without your consent.<span class="green-writing"> (If this is successful then you can continuously gain private information from Lloyds which can be sold on the black market, gaining you more money each round, if this information is used by fraudsters Lloyds' reputation will be damaged)</span></li>
+
+
+        </ul>
+
+        <p class="popUpWindowText">Price = £5,000/unit</p>
+
+        <p class="popUpWindowText">Quantity:</p>
+
+        <div id="slider" class="sliders">
+          <div id="custom-handle" class="ui-slider-handle"></div>
+        </div>
+
+      </div>
+
+      <div class="popUpWindow hidden" id="window3Popup">
+
+        <div class="popUpWindowTitleContainer">
+          
+          <h2 class="popUpWindowTitle">Password Hacking</h2>
+
+        </div>
+
+        <button class="close-button" id="closeButton3">X</button>
+
+
+
+        <p class="popUpWindowText clear">Password hacking, sometimes referred to as password cracking, is a method of recovering passwords from data transmitted by or stored on a computer.</p>
+
+        <hr>
+
+        <p class="popUpWindowText">Guessing and brute force are two methods used to hack passwords. Individuals with knowledge of the password owner’s personal information may guess at the password and choose possibilities based on that owner’s date of birth, pet, relative or other information. The brute force method involves attempting to input every possible password combination to retrieve a password.</p>
+
+        <p class="popUpWindowText green-writing">(If you choose this method you will attempt to crack an employee's password, your chances of success will depend on how much your opponent has invested in training up their employees in password best practices. How much money you'll gain by selling the stolen information and how much damage you'll cause will depend on your luck)</p>
+
+        <p class="popUpWindowText">Price = £5,000/unit</p>
+
+        <p class="popUpWindowText">Quantity:</p>
+
+        <div id="slider32" class="sliders">
+          <div id="custom-handle32" class="ui-slider-handle"></div>
+        </div>
+
+        <p class="popUpWindowText">System hacking is defined as the compromise of computer systems and software to access the target computer and steal or misuse their sensitive information. You can exploit the weaknesses in a computer system or network to gain unauthorised access to its data or take illegal advantage. This can be made easier if systems or devices haven't been updated in a while, as updates usually contain security patches for vulnerabilities.</p>
+
+        <p class="popUpWindowText green-writing">(If you choose this method you will attempt to hack into the system, your chances of success will depend on how up to date the software updates of your opponents are. This method will gain you money and damage your opponent, the more you invest the higher the effects)</p>
+          
+        
+
+        <p class="popUpWindowText">Price = £5,000/unit</p>
+
+        <p class="popUpWindowText">Quantity:</p>
+
+        <div id="slider3" class="sliders">
+          <div id="custom-handle3" class="ui-slider-handle"></div>
+        </div>
+
+      </div>
+
+      <div class="popUpWindow hidden" id="window5Popup">
+
+        <div class="popUpWindowTitleContainer">
+          
+          <h2 class="popUpWindowTitle">Physical Social Engineering</h2>
+
+        </div>
+
+        <button class="close-button" id="closeButton5">X</button>
+
+
+
+        <p class="popUpWindowText clear">Physical social engineering is social engineering that occurs in person, often on company premises.</p>
+
+        <p class="popUpWindowText green-writing">(If you choose this method, you will send someone from your team to infiltrate a Lloyds office, some of these techniques are riskier and may lose you money if you are caught, however the rates of return are also higher for these techniques. Your chances of success will depend on how much training the opponent's employees have had on physical security).</p>
+          
+        <p class="popUpWindowText">The fake IT guy - This is where a hacker shows up at a workplace pretending to be an IT technician, there to check a computer, server, printer or other network device.</p>
+
+        <p class="popUpWindowText green-writing">(This method will gain you access to the physical infrastructure of the company, if successful this can cause significant damage to the opponent)</p>
+
+        <p class="popUpWindowText">Dumpster diving - Where attackers go through your company’s rubbish skips looking for documents containing sensitive or confidential information. They then use this information to gain access to the company or customer data. </p>
+
+        <p class="popUpWindowText green-writing">(This is a lower cost and a low-risk technique, however it may also have low gains)</p>
+
+        <p class="popUpWindowText">Price = £5,000/unit</p>
+
+        <p class="popUpWindowText">Quantity:</p>
+
+        <div id="slider5" class="sliders">
+          <div id="custom-handle5" class="ui-slider-handle"></div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+
+    <script type="text/javascript" src="jquery-ui/jquery-ui.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(".option-tile").click(function() {
+
+          var popupId = $(this).attr("id") + "Popup";
+          $('#' + popupId).addClass("show");
+
+        });
+
+
+        $("#closeButton1").click(function() {
+
+          console.log("hello");
+
+          $("#window1Popup").removeClass("show");
+
+          $("#window1Popup").addClass("hidden");
+          
+
+        });
+
+        $("#closeButton3").click(function() {
+
+          console.log("hello");
+
+          $("#window3Popup").removeClass("show");
+
+          $("#window3Popup").addClass("hidden");
+
+
+        });
+
+
+        $("#closeButton5").click(function() {
+
+          console.log("hello");
+
+          $("#window5Popup").removeClass("show");
+
+          $("#window5Popup").addClass("hidden");
+
+
+        });
+
+        function checkMoneyOver() {
+
+          if ($("#current-budget").html() < 0) {
+
+            const button = document.querySelector('button');
+            button.disabled = true;
+
+          }
+
+          if ($("#current-budget").html() > 0) {
+
+            const button = document.querySelector('button');
+            button.disabled = false;
+
+          }
+
+          }
+
+
+        var valuePrev=0;
+
+        var valuePrev3=0;
+
+        var valuePrev5=0;
+
+        var valuePrev32 = 0;
+
+        $("#slider").slider({
+            range: "min",
+            max: 100,
+            value: 0,
+            stop: function(event, ui) {
+
+                var valueNew = $( "#slider" ).slider( "value" );
+                var currentBudget = $("#current-budget").html();
+
+                if (valueNew - valuePrev > 0) {
+
+                  var newBudget = currentBudget - ((valueNew-valuePrev)*5000);
+                  $("#current-budget").html(newBudget);
+
+                }
+
+                if (valueNew - valuePrev < 0) {
+
+                  var newBudget = currentBudget - ((valueNew - valuePrev) * 5000);
+                  $("#current-budget").html(newBudget);
+
+                }
+                
+                valuePrev = valueNew;
+
+                if (valueNew == 0) {
+
+                  $("#tile1QuantityList").addClass("hidden");
+
+                  $("#tile1QuantityList").removeClass("show");
+
+                } else {
+
+                  $("#tile1QuantityList").addClass("show");
+
+                  $("#tile1QuantityList").removeClass("hidden");
+
+                  $("#tile1Quantity").html("£" + valueNew * 5000);
+
+                }
+                
+                checkMoneyOver()
+
+            }
+        });
+
+
+        $("#slider3").slider({
+            range: "min",
+            max: 100,
+            value: 0,
+            stop: function(event, ui) {
+
+                var valueNew = $( "#slider3" ).slider( "value" );
+                var currentBudget = $("#current-budget").html();
+
+                if (valueNew - valuePrev3 > 0) {
+
+                  var newBudget = currentBudget - ((valueNew-valuePrev3)*5000);
+                  $("#current-budget").html(newBudget);
+
+                }
+
+                if (valueNew - valuePrev3 < 0) {
+
+                  var newBudget = currentBudget - ((valueNew - valuePrev3) * 5000);
+                  $("#current-budget").html(newBudget);
+
+                }
+                
+                valuePrev3 = valueNew;
+
+                if (valueNew == 0) {
+
+                  $("#tile3QuantityList").addClass("hidden");
+
+                  $("#tile3QuantityList").removeClass("show");
+
+                } else {
+
+                  $("#tile3QuantityList").addClass("show");
+
+                  $("#tile3QuantityList").removeClass("hidden");
+
+                  $("#tile3Quantity").html("£" + valueNew * 5000);
+
+                }
+                
+                checkMoneyOver()
+
+            }
+        });
+
+        $("#slider5").slider({
+            range: "min",
+            max: 100,
+            value: 0,
+            stop: function(event, ui) {
+
+                var valueNew = $( "#slider5" ).slider( "value" );
+                var currentBudget = $("#current-budget").html();
+
+                if (valueNew - valuePrev5 > 0) {
+
+                  var newBudget = currentBudget - ((valueNew-valuePrev5)*5000);
+                  $("#current-budget").html(newBudget);
+
+                }
+
+                if (valueNew - valuePrev5 < 0) {
+
+                  var newBudget = currentBudget - ((valueNew - valuePrev5) * 5000);
+                  $("#current-budget").html(newBudget);
+
+                }
+                
+                valuePrev5 = valueNew;
+
+                if (valueNew == 0) {
+
+                  $("#tile5QuantityList").addClass("hidden");
+
+                  $("#tile5QuantityList").removeClass("show");
+
+                } else {
+
+                  $("#tile5QuantityList").addClass("show");
+
+                  $("#tile5QuantityList").removeClass("hidden");
+
+                  $("#tile5Quantity").html("£" + valueNew * 5000);
+
+                }
+                
+                checkMoneyOver()
+
+            }
+        });
+
+        $("#slider32").slider({
+            range: "min",
+            max: 100,
+            value: 0,
+            stop: function(event, ui) {
+
+                var valueNew = $( "#slider32" ).slider( "value" );
+                var currentBudget = $("#current-budget").html();
+
+                if (valueNew - valuePrev32 > 0) {
+
+                  var newBudget = currentBudget - ((valueNew-valuePrev32)*5000);
+                  $("#current-budget").html(newBudget);
+
+                }
+
+                if (valueNew - valuePrev32 < 0) {
+
+                  var newBudget = currentBudget - ((valueNew - valuePrev32) * 5000);
+                  $("#current-budget").html(newBudget);
+
+                }
+                
+                valuePrev32 = valueNew;
+
+                if (valueNew == 0) {
+
+                  $("#tile3QuantityList").addClass("hidden");
+
+                  $("#tile3QuantityList").removeClass("show");
+
+                } else {
+
+                  $("#tile3QuantityList").addClass("show");
+
+                  $("#tile3QuantityList").removeClass("hidden");
+
+                  $("#tile3Quantity").html("£" + valueNew * 5000);
+
+                }
+                
+                checkMoneyOver()
+
+            }
+        });
+        
+        $( function() {
+        var handle = $( "#custom-handle" );
+        $( "#slider" ).slider({
+          create: function() {
+            handle.text( $( this ).slider( "value" ) );
+          },
+          slide: function( event, ui ) {
+            handle.text( ui.value );
+          }
+        });
+      } );
+
+      $( function() {
+        var handle = $( "#custom-handle3" );
+        $( "#slider3" ).slider({
+          create: function() {
+            handle.text( $( this ).slider( "value" ) );
+          },
+          slide: function( event, ui ) {
+            handle.text( ui.value );
+          }
+        });
+      } );
+
+      $( function() {
+        var handle = $( "#custom-handle5" );
+        $( "#slider5" ).slider({
+          create: function() {
+            handle.text( $( this ).slider( "value" ) );
+          },
+          slide: function( event, ui ) {
+            handle.text( ui.value );
+          }
+        });
+      } );
+
+      $( function() {
+        var handle = $( "#custom-handle32" );
+        $( "#slider32" ).slider({
+          create: function() {
+            handle.text( $( this ).slider( "value" ) );
+          },
+          slide: function( event, ui ) {
+            handle.text( ui.value );
+          }
+        });
+      } );
+
+      $("#submit-button").click(function() {
+
+        const button = document.querySelector('button');
+        button.disabled = true;
+
+      })
+
+      $(".option-tile").hover(function(){
+
+// on hover over class .tile
+  $(this).find(".hover-div").css("display", "block")
+  //find inside class .tile_content and set display to block
+  }, function(){
+  $(this).find(".hover-div").css("display", "none")
+  // on mouse out set it back
+});
+
+
+      $("#submit-button").click(function() {
+
+        $("#waiting-p").removeClass("hidden");
+
+        $("#waiting-p").addClass("show");
+
+      })
+
+
+      
+
+    </script>
+
+  </body>
+
+
+</html>
