@@ -1,0 +1,511 @@
+html {
+
+  overflow: hidden;
+
+}
+
+body {
+
+  margin: 0;
+  padding: 0;
+
+}
+
+#top-bar {
+
+  height: 17.5vh;
+  width: 100%;
+  background-color: rgb(29, 136, 29);
+  border-bottom: 10px solid black;
+
+}
+
+#title-container {
+
+  width: 50vw;
+  height: 10vh;
+  float: left;
+  position: relative;
+  
+
+}
+
+#hacker-name {
+
+  margin:0;
+  padding: 5px 2vw;
+  font-family: 'Roboto Mono', monospace;
+
+}
+
+#hacker-icon {
+
+  width: 30vh;
+  float: right;
+  padding: 9px 4px;
+
+
+
+}
+
+#money-container {
+
+  width: 200px;
+  height: 26px;
+  background-color: grey;
+  position: relative;
+  margin-left: 2vw;
+  border-radius: 5px;
+  padding: 4px;
+  font-size: 20px;
+  border: 2px solid black;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  top: -2px;
+  float: left;
+
+
+}
+
+.clear-left {
+
+  clear: left;
+
+}
+
+#main-area {
+
+  height: 82.5vh;
+  width: 100%;
+  background-color: grey;
+
+}
+
+#left-area {
+
+  height: 82.5vh;
+  width: 80%;
+  position: relative;
+  z-index: 1;
+  float: left;
+
+
+
+}
+
+#row1 {
+
+  height: 40vh;
+  width: 100%;
+
+
+
+}
+
+.option-tile {
+
+  width: 30%;
+  height: 35vh;
+  background-color: rgb(43, 42, 42);
+  position: relative;
+  float: left;
+  border-radius: 5px;
+  margin-left: 2.25%;
+  border: 2px solid black;
+  overflow: hidden;
+  
+
+  
+
+}
+
+.row1class {
+
+  top: 3vh;
+
+}
+
+.row2class {
+
+  top: 2vh;
+
+}
+
+#right-area {
+
+  background-color:rgb(43, 42, 42);
+  width: 20%;
+  height: 82.5vh;
+  float: left;
+  color: white;
+  
+
+}
+
+#right-area p {
+
+  color: white;
+  padding: 10px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  margin-left: 1vw;
+
+}
+
+.hidden {
+
+  display: none;
+
+}
+
+.popUpWindow {
+
+  position: absolute;
+  height: 75vh;
+  width: 77vw;
+  z-index: 2;
+  left: 1.5vw;
+  top: 22vh;
+  background-color:rgb(43, 42, 42);
+  border-radius: 5px;
+  border: 2px solid black;
+
+
+
+}
+
+.clear {
+
+  clear: both;
+
+}
+
+.popUpWindowTitleContainer {
+
+  width: 30vw;
+  height: 10vh;
+  float: left;
+
+}
+
+.popUpWindowTitle {
+
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+  padding: 15px 0px 0px 15px;
+  position: relative;
+  margin: 0;
+
+}
+
+.popUpWindowText {
+
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+  font-size: 12px;
+  padding: 0px 15px;
+
+}
+
+#custom-handles {
+  width: 3em;
+  height: 1.6em;
+  top: 50%;
+  margin-top: -.8em;
+  text-align: center;
+  line-height: 1.6em;
+  font-family: 'Roboto Mono', monospace;
+  background-color: rgb(189, 27, 27);
+  font-weight: bold;
+  color: white;
+}
+
+#custom-handles3 {
+  width: 3em;
+  height: 1.6em;
+  top: 50%;
+  margin-top: -.8em;
+  text-align: center;
+  line-height: 1.6em;
+  font-family: 'Roboto Mono', monospace;
+  background-color: rgb(189, 27, 27);
+  font-weight: bold;
+  color: white;
+}
+
+#custom-handles5 {
+  width: 3em;
+  height: 1.6em;
+  top: 50%;
+  margin-top: -.8em;
+  text-align: center;
+  line-height: 1.6em;
+  font-family: 'Roboto Mono', monospace;
+  background-color: rgb(189, 27, 27) !important;
+  font-weight: bold;
+  color: white;
+}
+
+.sliders {
+
+  width: 30vw;
+  position: relative;
+  left: 15px;
+  top: 15px;
+
+}
+
+.close-button {
+
+  float: right;
+  color: white;
+  border: none;
+  background-color:rgb(43, 42, 42);
+  font-size: 30px;
+  margin: 15px 15px 0px 0px;
+
+}
+
+.show {
+
+  display: block;
+
+}
+
+#button-container {
+
+
+  width: 100%;
+  height: 7.5vh;
+  position: absolute;
+  top: 80vh;
+
+
+}
+
+#submit-button {
+
+  left: 2.5vw;
+  
+  width: 15vw;
+  height: 6vh;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+  position: absolute;
+  z-index: 3;
+
+}
+
+#top-right-section {
+
+  width: 100%;
+  height: 50vh;
+
+}
+
+#investments {
+
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+  margin-left: 1vw;
+
+}
+
+.tile-image {
+
+  width: 40%;
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+  
+  
+
+}
+
+.hover-div {
+
+  z-index: 2;
+  position: relative;
+  top: -3vh;
+  color: rgb(43, 42, 42);
+  background-color: whitesmoke;
+  height: 8vh;
+  font-family: 'Roboto Mono', monospace;
+  padding: 2vh 1vw;
+  font-weight: bold;
+  font-size: 80%;
+  
+
+}
+
+#waiting-p {
+
+  position: relative;
+
+  margin: 0 auto;
+  
+
+}
+
+#activity-report {
+
+  width: 96%;
+  margin: 2vh 1.5vw;
+  height: 93%;
+  background-color: rgb(43, 42, 42);
+  z-index: 100;
+  position: absolute;
+  border-radius: 10px;
+
+}
+
+#activity-report-title {
+
+
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+  padding: 2% 0px 0px 2%;
+  position: relative;
+  margin: 0;
+
+}
+
+#text-div {
+
+  width: 95%;
+  margin: 2vh auto;
+  height: 83%;
+  background-color: rgb(43, 42, 42);
+  overflow: auto;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+
+}
+
+#points-div {
+
+  float: left;
+
+}
+
+#points-para-container {
+
+  float: left;
+  width: 5vw;
+  height: 26px;
+  padding-bottom: 10px;
+  padding-left: 5vw;
+
+}
+
+#points-para {
+
+  float: left;
+  color: black;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  position: relative;
+  top: -1.5vh;
+  margin-bottom: 2vh;
+
+}
+
+#points-container {
+
+  width: 100px;
+  height: 26px;
+  background-color: grey;
+  position: relative;
+  margin-left: 2vw;
+  border-radius: 5px;
+  padding: 4px;
+  font-size: 20px;
+  border: 2px solid black;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  top: -2px;
+  float: left;
+
+}
+
+#round-div {
+
+  float: left;
+
+}
+
+#round-para-container {
+
+  float: left;
+  width: 5vw;
+  height: 26px;
+  padding-bottom: 10px;
+  padding-left: 5vw;
+
+}
+
+#round-para {
+
+  float: left;
+  color: black;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  position: relative;
+  top: -1.5vh;
+  margin-bottom: 2vh;
+
+}
+
+#round-container {
+
+  width: 100px;
+  height: 26px;
+  background-color: grey;
+  position: relative;
+  margin-left: 2vw;
+  border-radius: 5px;
+  padding: 4px;
+  font-size: 20px;
+  border: 2px solid black;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  top: -2px;
+  float: left;
+
+}
+
+.red-writing {
+
+  color: red !important;
+  font-weight: bold;
+
+}
+
+#to-lloyds {
+
+  left: 2.5vw;
+  
+  width: 15vw;
+  height: 6vh;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+  position: relative;
+  z-index: 3;
+  top: 7vh;
+  
+
+}
+
+#to-lloyds a {
+
+  text-decoration: none;
+  color: black;
+
+}
